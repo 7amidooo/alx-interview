@@ -14,7 +14,7 @@ def x(i, vis, boxes):
 
     vis[i] = 1
     for it in boxes[i]:
-        if vis[it] == 0:
+        if it < len(vis) and vis[it] == 0:
             x(it, vis, boxes)
 
 
@@ -29,7 +29,7 @@ def canUnlockAll(boxes):
     vis = []
     for i in range(0, len(boxes)):
         vis.append(0)
-    vis[0]=1
+    vis[0] = 1
     x(0, vis, boxes)
     for i in range(0, len(vis)):
         if vis[i] == 0:
