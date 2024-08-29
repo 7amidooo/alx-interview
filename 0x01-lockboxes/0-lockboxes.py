@@ -31,3 +31,11 @@ def canUnlockAll(boxes):
         if vis[i] == 0:
             return False
     return True
+
+def main():
+    """Entry point"""
+    canUnlockAll([[]])
+
+
+if __name__ == '__main__':
+    main()
