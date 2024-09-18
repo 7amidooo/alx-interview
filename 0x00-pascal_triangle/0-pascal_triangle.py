@@ -19,3 +19,4 @@ def pascal_triangle(n):
         arr2[i] = 1
         arr.append(arr2)
     return arr
+    
